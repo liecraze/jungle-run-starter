@@ -1,8 +1,22 @@
 const game = new Game();
 
-function preload() {}
-function setup() {}
-function draw() {}
+function preload() {
+  game.preloadGame();
+}
+function setup() {
+  createCanvas(600,400);             // predefined method
+  game.setupGame();
+}
+function draw() {
+    clear();
+  game.drawGame();
+}
 
 // add the jump function here:
-function keyPressed() {}
+function keyPressed() {
+
+  if ( keyCode === 32)
+  {
+    game.player.jump();     // player lives in game
+  }
+}
